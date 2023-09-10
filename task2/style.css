@@ -1,0 +1,11 @@
+p {
+    font-size: 30px;
+    color: #b92f09;
+    font-family: serif;
+    cursor: pointer;
+}
+
+code {
+    font-size: 20px;
+    color: hwb(258 5% 38%);
+}

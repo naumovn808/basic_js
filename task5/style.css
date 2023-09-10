@@ -1,0 +1,39 @@
+form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+label {
+    font-size: 20px;
+    color: gray;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    color: #4c09b9;
+    font-family: serif;
+}
+
+button {
+    padding: 10px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+button:hover {
+    color: rgba(31, 30, 30, 0.427)
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 20px;
+}
+

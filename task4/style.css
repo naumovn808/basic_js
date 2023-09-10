@@ -1,0 +1,11 @@
+a {
+    font-size: 30px;
+    color: #4c09b9;
+    font-family: serif;
+    text-decoration: none;
+    transition: opacity 0.5s;
+}
+
+a:hover {
+    opacity: 0.6;
+}
