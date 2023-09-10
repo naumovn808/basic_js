@@ -1,22 +1,48 @@
-const trafficLightEl = document.querySelector('#trafficLight');
+const trafficLightEl = document.querySelectorAll('#trafficLight');
+const colors = ['green', 'yellow', 'red'];
 
-function makeGreen() {
-    trafficLightEl.style.background = ('green');
-    trafficLightEl.removeEventListener('click', makeGreen);
-    trafficLightEl.addEventListener('click', makeYellow);
+let i = 0;
+
+
+const changeColors = () => {
+
+    trafficLightEl.forEach((el) => {
+        el.style.backgroundColor = 'black';
+    })
+
+    if (i > 2) i = 0;
+    trafficLightEl[i].style.backgroundColor = colors[i];
+    i++;
 }
 
-function makeYellow() {
-    trafficLightEl.style.background = ('yellow');
-    trafficLightEl.removeEventListener('click', makeYellow);
-    trafficLightEl.addEventListener('click', makeRed);
-}
+trafficLightEl.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
 
-function makeRed() {
-    trafficLightEl.style.background = ('red');
-    trafficLightEl.removeEventListener('click', makeRed);
-    trafficLightEl.addEventListener('click', makeGreen);
-}
+        changeColors();
+    });
+
+})
 
 
-trafficLightEl.addEventListener('click', makeGreen);
+
+// function makeGreen() {
+//     trafficLightEl.style.background = ('green');
+//     trafficLightEl.removeEventListener('click', makeGreen);
+//     trafficLightEl.addEventListener('click', makeYellow);
+// }
+
+// function makeYellow() {
+//     trafficLightEl.style.background = ('yellow');
+//     trafficLightEl.removeEventListener('click', makeYellow);
+//     trafficLightEl.addEventListener('click', makeRed);
+// }
+
+// function makeRed() {
+//     trafficLightEl.style.background = ('red');
+//     trafficLightEl.removeEventListener('click', makeRed);
+//     trafficLightEl.addEventListener('click', makeGreen);
+// }
+
+
+// trafficLightEl.addEventListener('click', makeGreen);
